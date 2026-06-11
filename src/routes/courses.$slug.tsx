@@ -37,7 +37,7 @@ export const Route = createFileRoute("/courses/$slug")({
 });
 
 function CourseDetail() {
-  const c = Route.useLoaderData();
+  const c = Route.useLoaderData() as (typeof courses)[number];
   return (
     <div className="min-h-screen bg-white text-slate-900">
       <Header />
